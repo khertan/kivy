@@ -323,6 +323,7 @@ cdef class _WindowSDL2Storage:
         if event.type == SDL_QUIT:
             return ('quit', )
         elif event.type == SDL_DROPFILE:
+            print('dropfile in poll:', event.drop.file)
             return ('dropfile', event.drop.file)
         elif event.type == SDL_MOUSEMOTION:
             x = event.motion.x
