@@ -414,6 +414,9 @@ class WindowSDL(WindowBase):
             if not self._pause_loop:
                 break
             event = self._win.poll()
+            if event is None:
+                continue
+
             action, args = event[0], event[1:]
             if action == 'dropfile':
                 print('we got a dropfile action !!!')
