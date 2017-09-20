@@ -49,7 +49,7 @@ cdef class _WindowSDL2Storage:
             name = 'app_willenterforeground'
         elif event.type == SDL_APP_DIDENTERFOREGROUND:
             name = 'app_didenterforeground'
-        print('event name:', name)
+        print('event name:', name, event.type)
         if not name:
             return 1
         return self.event_filter(name)
