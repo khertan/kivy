@@ -492,6 +492,7 @@ class WindowSDL(WindowBase):
                     self._mouse_x, self._mouse_y, btn, self.modifiers)
 
             elif action == 'dropfile':
+                print('we got a dropfile action !!!')
                 dropfile = args
                 self.dispatch('on_dropfile', dropfile[0])
             # video resize
